@@ -1,0 +1,272 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+   
+/* Variable Declarations */
+:root {
+  --darkUI: #23262e;
+  --lightUI: #383d4a;
+  --darkestBlue: #0e131a;
+  --darkBlue: #1a73e8;
+  --blue: #1a9fff;
+  --white: #efefef;
+  --green: #03ff6c;
+  --red: #f44336;
+  --lightestGray: #90959e;
+  --defaultBorder: 3px solid var(--darkBlue);
+}
+
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* General HTML Elements */
+
+body {
+  background-color: var(--darkestBlue);
+/*  
+  background-image: 
+    radial-gradient(circle, transparent 50%, var(--darkestBlue) 95%),
+    url("/rect3.svg"),
+    url("/pipes.gif");    
+  background-position: top center, top center;
+  background-repeat: repeat, no-repeat;
+*/
+  color: var(--white);
+  font-family: "Roboto", Montserrat, Terminus;
+  text-align: center;
+}
+
+footer {
+  font-size: 9pt;
+  background-color: var(--darkestBlue);
+}
+
+h1 {
+  font-size: 20pt;
+  background-color: var(--darkestBlue);
+  padding:10px;
+  margin-bottom: -5px;
+  text-shadow: 2px 2px 5px --darkestBlue;
+}
+
+h3 {
+  font-size: 14pt;
+  color: var(--lightestGray);
+  padding: 3px;
+  text-shadow: 2px 2px 5px --darkestBlue;
+}
+
+ul, li {
+  list-style-type: none;
+  text-align: left;
+  list-style: inside;
+}
+
+p {
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  padding: 10px;
+  text-shadow: --darkestBlue 2px 2px 10px;
+}
+
+/* Link colours */
+a:link {
+  color: var(--blue);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: var(--green);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: cyan;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.menu {
+  /* background-color: var(--darkestBlue); */
+  text-align: center;
+  padding: 5px;
+  /* position: absolute;
+  width: 200px;
+  height: 300px;
+  margin-left: 0px;
+  margin-right: auto; 
+  transform: translate(0%, -125%);
+  top: 50%;
+  bottom: 50%; */
+}
+
+.menu table {
+  background-color: var(--darkestBlue);
+  font-size: 15pt;
+  padding: 5px;
+  border-spacing: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu th {
+  border: var(--defaultBorder);
+  position: relative;
+  padding: 5px;
+}
+
+/* .menu p {
+  text-align: left;
+  font-size: 15pt;
+  padding: 2px;
+  border: var(--defaultBorder);
+  background-color: var(--darkestBlue);
+  width: 70%;
+} */
+
+.menu a:link {
+  color: var(--white);
+  background-color: var(--darkestBlue);
+  text-decoration: none;
+}
+
+.menu a:visited {
+  color: var(--white);
+  background-color: var(--darkestBlue);
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: var(--blue);
+  background-color: var(--darkestBlue);
+  text-decoration: none;
+}
+
+.menu a:active {
+  color: grey;
+  background-color: var(--darkestBlue);
+  text-decoration: none;
+}
+
+/* Specific Sections */
+
+#pfp {
+  border: var(--defaultBorder);
+  width: 200px;
+  margin-top: 10px;
+}
+
+.asciiArt {
+  text-align: left;
+  font-family: Terminus , Hermit, monospace;
+}
+
+.asciiArt pre {
+  background-color: var(--darkestBlue);
+  border: var(--defaultBorder);
+  width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.links {
+  background-color: var(--darkestBlue);
+  width: 400px;
+}
+
+.links p {
+  padding:5px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.table_of_contents {
+  text-align: left;
+  padding: 5px;
+}
+
+.table_of_contents table {
+  background-color: var(--darkestBlue);
+  border: var(--defaultBorder);
+  font-size: 12pt;
+  padding: 5px;
+  border-spacing: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.window {
+  border: var(--defaultBorder);
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.titlebar_blue {
+  background: #1a73e8;
+  border-bottom: var(--defaultBorder);
+  height: 40px;
+  
+  margin-top: -19px;
+}
+
+.titlebar_red {
+  background: #f44336;
+  border-bottom: var(--defaultBorder);
+  height: 40px;
+  
+  margin-top: -19px;
+}
+
+
+.titlebar_green {
+  background: #4caf50;
+  border-bottom: var(--defaultBorder);
+  height: 40px;
+  
+  margin-top: -19px;
+}
+
+.titlebar_green p {
+    font-size: 14pt;
+    text-align: left;
+    text-shadow: --darkestBlue 4px 4px 10px;
+}
+
+.titlebar_red p {
+    font-size: 14pt;
+    text-align: left;
+    text-shadow: --darkestBlue 4px 4px 10px;
+}
+
+.titlebar_blue p {
+    font-size: 14pt;
+    text-align: left;
+    text-shadow: --darkestBlue 4px 4px 10px;
+}
+
+/*
+th1 {
+  font-size: 24pt;
+}
+
+.table_of_contents toc_title {
+  font-size: 16pt;
+}
+*/
