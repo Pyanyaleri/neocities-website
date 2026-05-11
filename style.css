@@ -17,13 +17,17 @@
   --green: #03ff6c;
   --darkGreen: #4caf50;
   --red: #f44336;
+  --orange: #ff9800;
+  --yellow: #ebd234;
   --lightestGray: #90959e;
 
   --defaultBorder: 2px solid var(--lightestGray);
 }
 
 html {
-  background-color: var(--darkestBlue);
+  background-color: var(--lightUI);
+  background-image: url("/assets/back_plain.png");
+  image-rendering: pixelated;
   font-size: 12pt;
   font-family: "Josefin Sans", sans-serif;
 }
@@ -45,7 +49,14 @@ body {
 }
 
 footer {
+  background: var(--lightUI);
+  border-top: var(--defaultBorder);
   font-size: 9pt;
+  padding-bottom: 1px;
+
+  & p {
+    padding: 0;
+  }
 }
 
 h1 {
@@ -86,11 +97,11 @@ a {
   }
 
   &:hover {
-    color: cyan;
+    color: var(--yellow);
   }
 
   &:active {
-    color: yellow;
+    color: var(--orange);
   }
 }
 
@@ -110,15 +121,15 @@ a {
     background-color: var(--darkestBlue);
     position: relative;
     padding: 5px;
+
+    &:hover {
+      border: 2px solid var(--blue);
+    }
   }
 
   & a {
     color: var(--white);
     text-decoration: none;
-
-    &:hover {
-      color: var(--blue);
-    }
 
     &:active {
       color: var(--lightestGray);
@@ -148,8 +159,6 @@ a {
 }
 
 .links {
-  width: 400px;
-
   & p {
     padding: 5px;
     width: 80%;
@@ -162,11 +171,15 @@ a {
 .window {
   background-color: var(--darkestBlue);
   border: var(--defaultBorder);
-  width: 400px;
+  width: 50%;
   margin-left: auto;
   margin-right: auto;
   border-radius: 12px 12px 0 0;
   overflow: hidden;
+
+  &:hover {
+    border: 2px solid var(--blue);
+  }
 }
 
 .titlebar {
