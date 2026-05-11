@@ -1,94 +1,133 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Academic Work</title>
-    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
-    <link rel="shortcut icon" href="profile_images/pfp_rft2_plain.svg" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link
+      rel="shortcut icon"
+      href="profile_images/pfp_rft2_plain.svg"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-
-    <h1>My Academics</h1>
+    <div class="titlebar titlebar-top">
+      <p><b>My Academics</b></p>
+    </div>
 
     <div class="menu">
       <table>
         <tr>
-        <th><b><a href="/index.html">Home</a></b></th>
-        <th><b><a href="https://github.com/Pyanyaleri/">GitHub</a></b></th>
-        <th><b><a href="interests.html">Interests</a></b></th>
-        <th><a href="academic_work.html">Academics</a></th>
+          <th>
+            <b><a href="/index.html">Home</a></b>
+          </th>
+          <th>
+            <b><a href="https://github.com/Pyanyaleri/">GitHub</a></b>
+          </th>
+          <th>
+            <b><a href="interests.html">Interests</a></b>
+          </th>
+          <th><a href="academic_work.html">Academics</a></th>
         </tr>
       </table>
     </div>
 
     <p>
-      I guess I do stuff in academia. It's not much but it's honest work. 
-      Just some basic stuff on Robots and in University. Hope it's interesting somewhat for you though.
+      I guess I do stuff in academia. It's not much but it's honest work. Just
+      some basic stuff on Robots and in University. Hope it's interesting
+      somewhat for you though.
     </p>
-    
-    <div class="table_of_contents">
-      <table>
-        <tr><th><b class="toc_title">Table of Contents</b></th></tr>
-        <tr><th><a class="th1" href="#rc">RoboCup</a></th></tr>
-        <tr><th><a class="th1" href="#spur">SPUR</a></th></tr>
-        <tr><th><a class="th1" href="#ps_work">Postgrad Work</a></th></tr>
-      </table>
-    </div>
-    
-    <h2 id="rc">RoboCup</h2>
-    
-    <p>
-      RoboCup is an international competition where several academics staff and students, get together to compete in different areas aiming to further the research into robotics.
-      Originally started off with soccer, there are now different domains, and within these domains are different leagues you can participate in.
-      From the domains of @home, industrial, junior, rescue, and soccer, I've only participated in soccer, and specifically the Standard Platform League (SPL for short).
-    </p>
-    
-    <p>
-      The ultimate goal of RoboCup while progressing the area of robotics, has been to have robots being able to compete with the reigning FIFA world champions in soccer with the official FIFA ruleset by 2050.
-      Currently we are halfway there and progress has been made.
-      Within the soccer domain, there is the humanoid league that develop robots that resemble the structure of a human, and so have to deal with the constraints that we have with regards to movement, balance and the like.
-      
-    </p>
-    
-    <h3 id="rc_re">RoboÉireann</h3>
-    
-    <p>
-      Started in 2009, I've joined RoboÉireann since 2022, and have tried to be an active contributer to it til the present day.
-      We're the only robocup team in Ireland, regardless of domain and league, originally NUmanoids when Maynooth collaborated with a university in Australia.
-      Now we are only in Maynooth and have a small team size, but have been able to keep up with our current codebase.
-    </p>
-    
-    <h3 id="rc_wd">Whistle Detection</h3>
-    
-    <p>
-      One of my main (and unfortunately longest) contributions to my team is the whistle detector.
-    </p>
-    
-    <h3 id="rc_gd">Gesture Detection</h3>
-    
-    <p>
-      Gesture detection was a project I initially didn't think I'd be contributing to for the team, considering that my background is in audio signal processing, and have virtually no experience in developing ML models for computer vision, but here I was.
-    </p>
-    
-    <h3 id="rc_cw">Committee Work</h3>
-    
-    <p>
-      My interest in the league spans outside of my own team, as I do love the idea of the SPL, and I've wanted to help in its advancement for future years and competitions.  
-    </p>
-    
-    <h2 id="spur">SPUR</h2>
-    
-    <h2 id="ps_work">Postgrad Work</h2>
-    
-    
-    <footer>
-      <p>Here is the footer. Currently, it lacks anything important,<br/>but you can go back to the <a href="/index.html">home page</a>.</p>
-    </footer> 
 
+    <div class="window">
+      <div class="titlebar titlebar-blue">
+        <p><b>Table of Contents</b></p>
+      </div>
+      <ul id="toc">
+        <li>
+          <a href="#rc">RoboCup</a>
+        </li>
+        <li>
+          <a href="#spur">SPUR</a>
+        </li>
+        <li>
+          <a href="#ps_work">Postgrad Work</a>
+        </li>
+      </ul>
+    </div>
+
+    <h2 id="rc">RoboCup</h2>
+
+    <p>
+      RoboCup is an international competition where several academics staff and
+      students, get together to compete in different areas aiming to further the
+      research into robotics. Originally started off with soccer, there are now
+      different domains, and within these domains are different leagues you can
+      participate in. From the domains of @home, industrial, junior, rescue, and
+      soccer, I've only participated in soccer, and specifically the Standard
+      Platform League (SPL for short).
+    </p>
+
+    <p>
+      The ultimate goal of RoboCup while progressing the area of robotics, has
+      been to have robots being able to compete with the reigning FIFA world
+      champions in soccer with the official FIFA ruleset by 2050. Currently we
+      are halfway there and progress has been made. Within the soccer domain,
+      there is the humanoid league that develop robots that resemble the
+      structure of a human, and so have to deal with the constraints that we
+      have with regards to movement, balance and the like.
+    </p>
+
+    <h3 id="rc_re">RoboÉireann</h3>
+
+    <p>
+      Started in 2009, I've joined RoboÉireann since 2022, and have tried to be
+      an active contributer to it til the present day. We're the only robocup
+      team in Ireland, regardless of domain and league, originally NUmanoids
+      when Maynooth collaborated with a university in Australia. Now we are only
+      in Maynooth and have a small team size, but have been able to keep up with
+      our current codebase.
+    </p>
+
+    <h3 id="rc_wd">Whistle Detection</h3>
+
+    <p>
+      One of my main (and unfortunately longest) contributions to my team is the
+      whistle detector.
+    </p>
+
+    <h3 id="rc_gd">Gesture Detection</h3>
+
+    <p>
+      Gesture detection was a project I initially didn't think I'd be
+      contributing to for the team, considering that my background is in audio
+      signal processing, and have virtually no experience in developing ML
+      models for computer vision, but here I was.
+    </p>
+
+    <h3 id="rc_cw">Committee Work</h3>
+
+    <p>
+      My interest in the league spans outside of my own team, as I do love the
+      idea of the SPL, and I've wanted to help in its advancement for future
+      years and competitions.
+    </p>
+
+    <h2 id="spur">SPUR</h2>
+
+    <h2 id="ps_work">Postgrad Work</h2>
+
+    <footer>
+      <p>
+        Here is the footer. Currently, it lacks anything important,<br />but you
+        can go back to the <a href="/index.html">home page</a>.
+      </p>
+    </footer>
   </body>
-  
 </html>
