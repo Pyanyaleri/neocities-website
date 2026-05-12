@@ -172,6 +172,11 @@ a {
   &:hover {
     border: 2px solid var(--blue);
   }
+
+  & ul,
+  li {
+    list-style-type: square;
+  }
 }
 
 .titlebar {
@@ -188,8 +193,8 @@ a {
 
   & ul,
   li {
-    list-style-type: square;
     line-height: 25px;
+    list-style-type: square;
   }
 }
 
@@ -207,6 +212,15 @@ a {
 
 .back-orange {
   background: var(--orange);
+}
+
+.half-half {
+  width: 80%;
+  max-width: 600px;
+
+  & ul {
+    width: 90%;
+  }
 }
 
 .titlebar-top {
