@@ -22,11 +22,15 @@
   --lightestGray: #90959e;
 
   --defaultBorder: 2px solid var(--lightestGray);
+  --defaultShadow:
+    #0e131a66 5px 5px, #0e131a4d 10px 10px, #0e131a33 15px 15px,
+    #0e131a1a 20px 20px, #0e131a0d 25px 25px;
 }
 
 html {
   background-color: var(--lightUI);
   background-image: url("/assets/back_plain.png");
+  background-attachment: fixed;
   image-rendering: pixelated;
   font-size: 12pt;
   font-family: "Josefin Sans", sans-serif;
@@ -43,10 +47,11 @@ body {
   color: var(--white);
   margin: 40px auto;
   width: 85%;
-  max-width: 1800px;
+  max-width: 1600px;
   text-align: center;
   border: 3px solid var(--blue);
   border-radius: 12px 12px 0 0;
+  box-shadow: var(--defaultShadow);
 }
 
 footer {
@@ -62,9 +67,10 @@ footer {
 
 h1 {
   font-size: 30pt;
-  margin: 10px 10px auto auto;
-  padding: 5px;
-  padding-top: 10px;
+  text-align: center;
+  margin: 10px 10px auto 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 h2 {
@@ -118,44 +124,17 @@ a {
   }
 }
 
-.menu {
-  text-align: center;
-
-  & table {
-    font-size: 15pt;
-    padding-top: 20px;
-    border-spacing: 10px;
-    margin: 0 auto;
-  }
-
-  & th {
-    border: var(--defaultBorder);
-    border-radius: 8px 8px 0 0;
-    background-color: var(--darkestBlue);
-    position: relative;
-    padding: 5px;
-
-    &:hover {
-      border: 2px solid var(--blue);
-    }
-  }
-
-  & a {
-    color: var(--white);
-    text-decoration: none;
-
-    &:active {
-      color: var(--lightestGray);
-    }
-  }
-}
-
 /* Specific Sections */
 
 #pfp {
   border: var(--defaultBorder);
   width: 200px;
-  margin-top: 10px;
+  margin-top: 20px;
+  box-shadow: var(--defaultShadow);
+
+  &:hover {
+    border: 2px solid var(--blue);
+  }
 }
 
 .asciiArt {
@@ -188,6 +167,7 @@ a {
   border-radius: 12px 12px 0 0;
   overflow: hidden;
   text-align: left;
+  box-shadow: var(--defaultShadow);
 
   &:hover {
     border: 2px solid var(--blue);
@@ -213,28 +193,68 @@ a {
   }
 }
 
-.titlebar-blue {
+.back-blue {
   background: var(--darkBlue);
 }
 
-.titlebar-red {
+.back-red {
   background: var(--red);
 }
 
-.titlebar-green {
+.back-green {
   background: var(--darkGreen);
 }
 
-.titlebar-orange {
+.back-orange {
   background: var(--orange);
 }
 
 .titlebar-top {
   background: var(--lightUI);
-  margin: -10px 0 auto auto;
   border-radius: 12px 12px 0 0;
 }
 
+.flex-menu {
+  display: flex;
+  align-items: flex-end;
+}
+
+.flex-subitem {
+  flex: 1;
+
+  border-radius: 8px 8px 0 0;
+  background-color: var(--lightUI);
+
+  & nav {
+    display: flex;
+    margin: 0;
+    gap: 10px;
+    padding-bottom: 8px;
+    flex-wrap: wrap;
+  }
+
+  & a {
+    background-color: var(--darkestBlue);
+    color: var(--white);
+    font-size: 15pt;
+    text-decoration: none;
+    padding: 10px;
+    border: var(--defaultBorder);
+    border-radius: 8px 8px 0 0;
+    border-bottom: none;
+
+    &:active {
+      color: var(--lightestGray);
+    }
+
+    &:hover {
+      border: 2px solid var(--blue);
+      background-color: var(--darkBlue);
+    }
+  }
+}
+
+/* For mobile devices */
 @media screen and (max-width: 768px) {
   html {
     font-size: 11pt;
@@ -260,20 +280,6 @@ a {
     padding-left: 30px;
   }
 
-  .menu {
-    text-align: center;
-
-    & table {
-      font-size: 13pt;
-      padding-top: 10px;
-      border-spacing: 5px;
-    }
-
-    & th {
-      padding: 3px;
-    }
-  }
-
   #pfp {
     border: var(--defaultBorder);
     width: 40%;
@@ -283,5 +289,25 @@ a {
   .window {
     width: 85%;
     margin: 15px auto;
+  }
+
+  .flex-subitem {
+    & a {
+      font-size: 12pt;
+    }
+  }
+}
+
+/* When the screen is too small of the buttons */
+@media screen and (max-width: 1321px) {
+  .flex-subitem {
+    & nav {
+      padding: 20px;
+    }
+
+    & a {
+      border: var(--defaultBorder);
+      border-radius: 8px 8px 8px 8px;
+    }
   }
 }
